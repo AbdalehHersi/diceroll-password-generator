@@ -72,7 +72,7 @@ function generatePassword(){
     randomFunction.push(getRandomSymbol);
   }
   if (numberUser === true) {
-    randomFunction.push(getRandomUpper);
+    randomFunction.push(getRandomNumber);
   }
 
   for(var i = 0; i < passwordLength; i++ ) {
