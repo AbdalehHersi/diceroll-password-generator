@@ -7,8 +7,6 @@
 // recieve and store values from user criteria into variables
 // fill out generatePassword function
 // create an array to be called inside the generate function
-// filter out the false values from the array
-// create a random string from the true criteria
 // make the result the same length as passwordLength
 // return the result
 
@@ -41,7 +39,7 @@ function getRandomSymbol() {
 
 
 
-var randomFunction = [];
+var randomFunction = [];  //  empty function filled from  line 65 to 80
 
 // Write password to the #password input
 function writePassword() {
@@ -55,15 +53,11 @@ function generatePassword(){
   var result = "";
   var pCriteria = uppercaseUser + lowercaseUser + numberUser + symbolUser;
   
-  console.log("password criteria ", pCriteria);
-
   if (pCriteria === 0){
-    return alert("You need to choose at least one");
+    return alert("You need to choose at least one");  //  if none are selected
   }
-  console.log(randomFunction);
-
   if (uppercaseUser === true) {
-    randomFunction.push(getRandomUpper);
+    randomFunction.push(getRandomUpper);  //  fill random func array
   }
   if (lowercaseUser === true) {
     randomFunction.push(getRandomLower);
@@ -75,14 +69,12 @@ function generatePassword(){
     randomFunction.push(getRandomNumber);
   }
 
-  for(var i = 0; i < passwordLength; i++ ) {
-    result += randomFunction[Math.floor(Math.random() * randomFunction.length)]();
+  console.log(randomFunction);
+
+  for(var i = 0; i < passwordLength; i++ ) {  //  set a loop for passwrod length and result
+    result += randomFunction[Math.floor(Math.random() * randomFunction.length)]();  //  random func array should have value
   }
 
-  
-  console.log(randomFunction);
-  
-  console.log(uppercaseUser, lowercaseUser, numberUser, symbolUser);
    return result;
 }
 
