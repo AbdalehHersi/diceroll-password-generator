@@ -9,9 +9,7 @@
 
 [My github profile](https://abdalehhersi.github.io/diceroll-password-generator/Develop/)
 
-[Password generator repository](https://github.com/AbdalehHersi/diceroll-password-generator.git)
-
-[Alternate link](https://github.com/AbdalehHersi/diceroll-password-generator)
+[Password generator repository](https://github.com/AbdalehHersi/diceroll-password-generator)
 
 # resources used
 
