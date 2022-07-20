@@ -1,3 +1,5 @@
+  //  notes
+
 // generate random criteria using functions e.g random numbers and random letters
 // link function to button so onclick prompt is displayed
 // store user password length in a variable
@@ -11,6 +13,7 @@
 // return the result
 
 // Assignment Code
+//  global variables
 var generateBtn = document.querySelector("#generate");
 var lowercaseUser = false;
 var symbolUser = false;
@@ -36,12 +39,9 @@ function getRandomSymbol() {
   return symbols[Math.floor(Math.random()*symbols.length)]; // random symbol from array
 }
 
-var randomFunction = {
-  lower: getRandomLower,
-  upper: getRandomUpper,
-  number: getRandomNumber,
-  symbol: getRandomSymbol
-};
+
+
+var randomFunction = [];
 
 // Write password to the #password input
 function writePassword() {
@@ -54,18 +54,36 @@ function writePassword() {
 function generatePassword(){
   var result = "";
   var pCriteria = uppercaseUser + lowercaseUser + numberUser + symbolUser;
-  var criteriaArr = [{ uppercaseUser }, { lowercaseUser }, { numberUser }, { symbolUser }].filter(
-    item => Object.values(item)[0]
-  );
-  console.log("Criteria Array ", criteriaArr);
+  
   console.log("password criteria ", pCriteria);
 
   if (pCriteria === 0){
     return alert("You need to choose at least one");
   }
+  console.log(randomFunction);
+
+  if (uppercaseUser === true) {
+    randomFunction.push(getRandomUpper);
+  }
+  if (lowercaseUser === true) {
+    randomFunction.push(getRandomLower);
+  }
+  if (symbolUser === true) {
+    randomFunction.push(getRandomSymbol);
+  }
+  if (numberUser === true) {
+    randomFunction.push(getRandomUpper);
+  }
+
+  for(var i = 0; i < passwordLength; i++ ) {
+    result += randomFunction[Math.floor(Math.random() * randomFunction.length)]();
+  }
 
   
-  console.log(generatePassword);
+  console.log(randomFunction);
+  
+  console.log(uppercaseUser, lowercaseUser, numberUser, symbolUser);
+   return result;
 }
 
 
