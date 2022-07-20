@@ -7,7 +7,7 @@
 # links
 [Deployed password generator](https://abdalehhersi.github.io/diceroll-password-generator/Develop/)
 
-[My github profile](https://abdalehhersi.github.io/diceroll-password-generator/Develop/)
+[My github profile](https://github.com/AbdalehHersi)
 
 [Password generator repository](https://github.com/AbdalehHersi/diceroll-password-generator)
 
